@@ -10,9 +10,17 @@ But first, let's reflect on the subject so far...
 
 # Reflection
 
-Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_10` folder.  
+Download and save the template Markdown file [REFLECTION.md](REFLECTION.md) to your `prac_10` folder.  
 Write short but meaningful answers to the questions in that file.  
 This will include links to your best code reviews with explanations.
+
+> [!IMPORTANT]
+> Take some time to think about these reflection questions.  
+> This is a university subject, and we expect university-level effort and quality.  
+> Be specific, clear, and personal.  
+> Avoid generalities like, "I have learned the importance of...", which sounds like it was generated with AI.  
+> If your answers are very brief, not personal, or not focused on your learning process, then you have not completed
+> this task to a satisfactory standard.
 
 # Testing
 
@@ -148,7 +156,8 @@ Flask docs are at: <http://flask.pocoo.org/docs>.
 
 In PyCharm, create a new project, choosing Flask.
 > [!NOTE]
-> You need the [Pro subscription](https://github.com/CP1404/Starter/wiki/Software-Setup#pycharm) to see this screen when making a new project.
+> You need the [Pro subscription](https://github.com/CP1404/Starter/wiki/Software-Setup#pycharm) to see this screen when
+> making a new project.
 
 If this is the first time you've done this, PyCharm should
 install the Flask package and other dependencies, like Jinja for templating.

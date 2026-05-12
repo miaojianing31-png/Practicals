@@ -1,13 +1,12 @@
 # CP1404 Practical Reflection
 
-Write short but thoughtful answers to each of the following.  
-Replace each `...` with your meaningful answer.
+(Replace each `...` with your answer.)
 
 ## Estimates
 
 Regarding the **estimates** that you did for practical tasks...
 
-### How was your estimate accuracy usually?
+### How was your estimate accuracy?
 
 ...
 
