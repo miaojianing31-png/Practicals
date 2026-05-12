@@ -415,6 +415,32 @@ Make the appropriate choice of file-reading technique for each of these question
 Remember that understanding and choosing "the right tool for the job" is a primary focus for you as a programmer.   
 In the questions above, you should have used `read`, `readline` and `for line in file` for reading.
 
+## File Size
+
+File: `file_size.py`
+
+Write a program that asks the user for a filename, then prints the number of lines in that file.
+
+- Use
+  our [standard while loop pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#while-loops-indefinite-iteration)
+  to keep asking the user for filenames until they just press Enter (empty string)
+- Use a function to determine the file 'size' in number of lines. Follow SRP and consider what you should pass in and
+  what you should return.
+- Use exceptions to handle missing files. This can be what we call "non-local catch". Even though you open the file
+  inside your file-reading function, you want to handle the error in `main()`.
+
+### Sample Output
+
+```
+Enter filename: no
+ERROR: no does not exist.
+Enter filename: no.py
+ERROR: no.py does not exist.
+Enter filename: readme.md
+readme.md has 616 lines.
+Enter filename: 
+```
+
 ## .gitignore
 
 ![GitHub logo](../images/githublogo.png)  
@@ -500,7 +526,7 @@ vice versa. A sample run of the program should look like (where `g` and `100` ar
     The character for 100 is d
 
 1. Start new file, `ascii_table.py`, and write code for this program.
-   Remember that you can use the ord() and chr() functions to convert
+   Remember that you can use the `ord()` and `chr()` functions to convert
    characters to ASCII integer values and vice versa.
 
 2. Add error checking so that the number entered must be between the
@@ -607,3 +633,4 @@ Some solutions (not all) for practicals are provided in the
 - `exceptions_to_complete.py`
 - `password_checker.py`
 - `files.py`
+- `file_size.py`
