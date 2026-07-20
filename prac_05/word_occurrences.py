@@ -8,10 +8,10 @@ words = text.split()
 word_to_count = {}
 
 for word in words:
-    if word in word_to_count:
-        word_to_count[word] += 1
-    else:
-        word_to_count[word] = 1
+    word_to_count[word] = word_to_count.get(word, 0) + 1
 
-for word, count in word_to_count.items():
-    print(word, ":", count)
+if word_to_count:
+    longest_word_length = max(len(word) for word in word_to_count)
+
+    for word in sorted(word_to_count):
+        print(f"{word:{longest_word_length}} : {word_to_count[word]}")
