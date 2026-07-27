@@ -1,8 +1,6 @@
 """
 CP1404 Practical 05 - Emails
 
-Estimate: 25 minutes
-Actual: 你的真实时间
 """
 
 
