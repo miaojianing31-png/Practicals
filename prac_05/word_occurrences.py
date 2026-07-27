@@ -1,18 +1,30 @@
 """
-CP1404 Practical 05 - Word Occurrences
-
+CP1404 Practical 05 - Wimbledon
 """
 
-text = input("Text: ")
-words = text.split()
+import csv
 
-word_to_count = {}
+FILENAME = "wimbledon.csv"
 
-for word in words:
-    word_to_count[word] = word_to_count.get(word, 0) + 1
 
-if word_to_count:
-    longest_word_length = max(len(word) for word in word_to_count)
+def main():
+    """Read and display Wimbledon data."""
+    records = read_data(FILENAME)
+    print(records)
 
-    for word in sorted(word_to_count):
-        print(f"{word:{longest_word_length}} : {word_to_count[word]}")
+
+def read_data(filename):
+    """Read Wimbledon CSV data."""
+    records = []
+
+    with open(filename, "r", encoding="utf-8-sig", newline="") as in_file:
+        reader = csv.reader(in_file)
+        next(reader)
+
+        for row in reader:
+            records.append(row)
+
+    return records
+
+
+main()
