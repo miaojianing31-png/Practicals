@@ -8,13 +8,14 @@ FILENAME = "wimbledon.csv"
 
 
 def main():
-    """Read and display Wimbledon data."""
+    """Read, process and display Wimbledon data."""
     records = read_data(FILENAME)
-    print(records)
+    champion_to_wins, countries = process_data(records)
+    display_results(champion_to_wins, countries)
 
 
 def read_data(filename):
-    """Read Wimbledon CSV data."""
+    """Read Wimbledon CSV data and return a list of records."""
     records = []
 
     with open(filename, "r", encoding="utf-8-sig", newline="") as in_file:
@@ -25,7 +26,10 @@ def read_data(filename):
             records.append(row)
 
     return records
+
+
 def process_data(records):
+    """Create champion win counts and champion countries."""
     champion_to_wins = {}
     countries = set()
 
@@ -37,5 +41,20 @@ def process_data(records):
         countries.add(country)
 
     return champion_to_wins, countries
+
+
+def display_results(champion_to_wins, countries):
+    """Display Wimbledon champions and countries."""
+    print("Wimbledon Champions:")
+
+    for champion, number_of_wins in champion_to_wins.items():
+        print(f"{champion} {number_of_wins}")
+
+    sorted_countries = sorted(countries)
+
+    print()
+    print(f"These {len(sorted_countries)} countries have won Wimbledon:")
+    print(", ".join(sorted_countries))
+
 
 main()
