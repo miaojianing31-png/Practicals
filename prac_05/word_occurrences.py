@@ -25,6 +25,17 @@ def read_data(filename):
             records.append(row)
 
     return records
+def process_data(records):
+    champion_to_wins = {}
+    countries = set()
 
+    for record in records:
+        country = record[1]
+        champion = record[2]
+
+        champion_to_wins[champion] = champion_to_wins.get(champion, 0) + 1
+        countries.add(country)
+
+    return champion_to_wins, countries
 
 main()
